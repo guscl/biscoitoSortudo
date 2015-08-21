@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   resources :fortune_messages
+  
+  get 'random' => 'fortune_messages#random'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

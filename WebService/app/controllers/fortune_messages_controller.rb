@@ -6,6 +6,12 @@ class FortuneMessagesController < ApplicationController
   def index
     @fortune_messages = FortuneMessage.all
   end
+  
+  # GET /fortune_messages/random
+  def random
+    random_message = FortuneMessage.random
+    render :json => random_message
+  end
 
   # GET /fortune_messages/1
   # GET /fortune_messages/1.json
