@@ -39,16 +39,20 @@ angular.module('app', ['ionic'])
 })
 
 .controller('cookieCtrl', function($scope) {
-  $scope.smashCookie = function() {
+  $scope.smashCookie = function(callback) {
     var xmlHttp = new XMLHttpRequest();
-    // xmlHttp.onreadystatechange = function() { 
-    //     if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-    //         callback(xmlHttp.responseText);
-    // }
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+    }
     xmlHttp.open("GET", "http://httpbin.org/ip", false); // true for asynchronous 
     xmlHttp.send(null);
-    alert(xmlHttp.responseText);
+    
   };
+	$scope.showMessage = function(message) {
+    alert(message);
+  };
+
 });
 
 
