@@ -25,24 +25,25 @@
 
   </head>
   <body ng-app="app" ng-controller="cookieCtrl" animation="slide-left-right-ios7">
-  <div>
     <div>
-        <ion-nav-bar class="bar-stable">
-            <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back">Back</ion-nav-back-button>
-        </ion-nav-bar>
-        <ion-nav-view></ion-nav-view>
+      <div>
+          <ion-nav-bar class="bar-stable">
+              <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back">Back</ion-nav-back-button>
+          </ion-nav-bar>
+          <ion-nav-view></ion-nav-view>
+      </div>
     </div>
-</div>
-<script id="page1.html" type="text/ng-template">
-<ion-view title="Biscoito Sortudo">
-    <ion-content padding="true" class="has-header">
-        <h1>Teste Sua Sorte</h1>
-        <label class="item item-input">
-            <span class="input-label">É feliz aquele que não é triste...</span><textarea placeholder=""> </textarea>
-        </label>
-        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT7bdkvW-AbkOrXQG_2cA9Rs5t34ZePRl1ovxuNWyq98WqsmhRA" style="width: 100%; height: auto;">
-        <button class="button button-positive button-block " ng-click="smashCookie(showMessage)">Esmagar Biscoito!</button>
-    </ion-content>
-</ion-view></script>
+    <script id="page1.html" type="text/ng-template">
+      <ion-view title="Biscoito Sortudo">
+          <ion-content padding="true" class="has-header">
+              <h1>Teste Sua Sorte</h1>
+              <label class="item item-input">
+                  <span class="input-label" id="input-label">É feliz aquele que não é triste...</span><textarea placeholder=""> </textarea>
+              </label>
+              <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT7bdkvW-AbkOrXQG_2cA9Rs5t34ZePRl1ovxuNWyq98WqsmhRA" style="width: 100%; height: auto;">
+              <button class="button button-positive button-block " ng-click="smashCookie(showMessage)">Esmagar Biscoito!</button>
+          </ion-content>
+      </ion-view>
+    </script>
   </body>
 </html>
