@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fortune Messages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fortune_messages.each do |fortune_message| %>
+      <tr>
+        <td><%= fortune_message.content %></td>
+        <td><%= link_to 'Show', fortune_message %></td>
+        <td><%= link_to 'Edit', edit_fortune_message_path(fortune_message) %></td>
+        <td><%= link_to 'Destroy', fortune_message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fortune message', new_fortune_message_path %>

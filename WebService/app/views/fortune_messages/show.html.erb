@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @fortune_message.content %>
+</p>
+
+<%= link_to 'Edit', edit_fortune_message_path(@fortune_message) %> |
+<%= link_to 'Back', fortune_messages_path %>
