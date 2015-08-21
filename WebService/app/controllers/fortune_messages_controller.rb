@@ -1,6 +1,12 @@
 class FortuneMessagesController < ApplicationController
   before_action :set_fortune_message, only: [:show, :edit, :update, :destroy]
+  after_action :set_access_control_headers, only: [:random]
 
+  def set_access_control_headers
+    headers['Access-Control-Allow-Origin'] = "*"
+    headers['Access-Control-Request-Method'] = %w{GET POST OPTIONS}.join(",")
+  end
+ 
   # GET /fortune_messages
   # GET /fortune_messages.json
   def index

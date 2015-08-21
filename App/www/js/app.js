@@ -45,7 +45,7 @@ angular.module('app', ['ionic'])
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
             callback(xmlHttp.responseText);
     }
-    xmlHttp.open("GET", "http://httpbin.org/ip", true); // true for asynchronous 
+    xmlHttp.open("GET", "http://localhost:3000/random", true); // true for asynchronous 
     xmlHttp.send(null);
   };
 	$scope.showMessage = function(message) {
