@@ -36,13 +36,18 @@ angular.module('app', ['ionic'])
   // if none of the above states are matched, use this as the fallback
   
   $urlRouterProvider.otherwise('');
-  
-
 })
 
 .controller('cookieCtrl', function($scope) {
   $scope.smashCookie = function() {
-    alert("test")
+    var xmlHttp = new XMLHttpRequest();
+    // xmlHttp.onreadystatechange = function() { 
+    //     if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+    //         callback(xmlHttp.responseText);
+    // }
+    xmlHttp.open("GET", "http://httpbin.org/ip", false); // true for asynchronous 
+    xmlHttp.send(null);
+    alert(xmlHttp.responseText);
   };
 });
 
