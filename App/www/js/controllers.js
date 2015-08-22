@@ -1,21 +1,17 @@
 angular.module('FortuneCookie.controllers', [])
 
 .controller('CookieCtrl', function($scope){
-
-    $scope.smashCookie = function(callback) {
-        var xmlHttp = new XMLHttpRequest();
+    
+    $scope.message = "Smash it!";
+    
+    $scope.smashCookie = function() {
         
-        xmlHttp.onreadystatechange = function() { 
-            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-                callback(xmlHttp.responseText);
-        }
-        
-        xmlHttp.open("GET", "http://localhost:3000/random", true); // true for asynchronous 
+        var xmlHttp = new XMLHttpRequest();        
+        xmlHttp.open("GET", "http://localhost:3000/random", false); // true for asynchronous 
         xmlHttp.send(null);
-    };
-  
-	  $scope.showMessage = function(message) {
-	      alert(message);
+        
+        var tmp = JSON.parse(xmlHttp.responseText);
+        $scope.message = tmp['content'];
     };
   
 });

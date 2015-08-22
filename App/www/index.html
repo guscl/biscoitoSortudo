@@ -5,46 +5,25 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
-    <style>
-      .angular-google-map-container {
-          width: 100%;
-          height: 504px;
-      }
-    </style>
-
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
-
-    <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
-  <script src="js/app.js"></script>
-  <script src="js/controllers.js"></script>
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
 
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
   </head>
-  <body ng-app="FortuneCookie" ng-controller="CookieCtrl" animation="slide-left-right-ios7">
-    <div>
-      <div>
-          <ion-nav-bar class="bar-stable">
-              <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back">Back</ion-nav-back-button>
-          </ion-nav-bar>
-          <ion-nav-view></ion-nav-view>
-      </div>
-    </div>
-    <script id="page1.html" type="text/ng-template">
-      <ion-view title="Biscoito Sortudo">
-          <ion-content padding="true" class="has-header">
-              <h1>Teste Sua Sorte</h1>
-              <label class="item item-input">
-                  <span class="input-label" id="input-label">É feliz aquele que não é triste...</span><textarea placeholder=""> </textarea>
-              </label>
-              <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT7bdkvW-AbkOrXQG_2cA9Rs5t34ZePRl1ovxuNWyq98WqsmhRA" style="width: 100%; height: auto;">
-              <button class="button button-positive button-block " ng-click="smashCookie(showMessage)">Esmagar Biscoito!</button>
-          </ion-content>
-      </ion-view>
-    </script>
+  <body ng-app="FortuneCookie">
+      <ion-nav-view>
+      </ion-nav-view>
   </body>
 </html>
