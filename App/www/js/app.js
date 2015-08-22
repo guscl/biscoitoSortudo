@@ -3,7 +3,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic'])
+angular.module('FortuneCookie', ['ionic', 'FortuneCookie.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -36,22 +36,6 @@ angular.module('app', ['ionic'])
   // if none of the above states are matched, use this as the fallback
   
   $urlRouterProvider.otherwise('');
-})
-
-.controller('cookieCtrl', function($scope) {
-  $scope.smashCookie = function(callback) {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() { 
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-            callback(xmlHttp.responseText);
-    }
-    xmlHttp.open("GET", "http://localhost:3000/random", true); // true for asynchronous 
-    xmlHttp.send(null);
-  };
-	$scope.showMessage = function(message) {
-    alert(message);
-  };
-
 });
 
 
