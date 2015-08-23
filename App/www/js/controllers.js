@@ -7,7 +7,7 @@ angular.module('FortuneCookie.controllers', [])
     $scope.smashCookie = function() {
         
         var xmlHttp = new XMLHttpRequest();        
-        xmlHttp.open("GET", "http://localhost:3000/random", false); // true for asynchronous 
+        xmlHttp.open("GET", "http://45.55.54.107:3000/random", false); // true for asynchronous 
         xmlHttp.send(null);
         
         var tmp = JSON.parse(xmlHttp.responseText);
