@@ -3,6 +3,7 @@ angular.module('FortuneCookie.controllers', [])
 .controller('CookieCtrl', function($scope){
     
     $scope.message = "Smash it!";
+    $scope.imgUrl = "images/cookie.jpeg";
     
     $scope.smashCookie = function() {
         
